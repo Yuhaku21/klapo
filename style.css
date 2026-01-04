@@ -227,21 +227,7 @@
   opacity: 0.9;
 }
 
-/* Button */
-.btn-book {
-  background: linear-gradient(135deg, #7C4585, #b76bc9);
-  color: #fff;
-  padding: 14px 40px;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
 
-.btn-book:hover {
-  background: linear-gradient(135deg, #b76bc9, #7C4585);
-  transform: translateY(-3px);
-  color: #fff;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
