@@ -26,12 +26,14 @@
 
 /* SMOOTH POPUP EFFECT */
 .offcanvas.show {
-  box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-toggler {
-  border: 4px solid #198754;   /* border hijau */
-  background-color: #e9f7ef;   /* background hijau muda */
+  border: 4px solid #198754;
+  /* border hijau */
+  background-color: #e9f7ef;
+  /* background hijau muda */
   padding: 8px 10px;
   border-radius: 10px;
 
@@ -150,66 +152,66 @@
 }
 
 .contact-footer {
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e5e7eb;
-    padding: 60px 0 30px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  padding: 60px 0 30px;
 }
 
 .footer-title {
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .footer-text {
-    font-size: 0.95rem;
-    color: #cbd5f5;
-    max-width: 350px;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  max-width: 350px;
 }
 
 .footer-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-list li {
-    margin-bottom: 12px;
-    font-size: 0.95rem;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
 }
 
 .footer-list a {
-    color: #e5e7eb;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-list a:hover {
-    color: #38bdf8;
+  color: #38bdf8;
 }
 
 .social-links a {
-    font-size: 26px;
-    margin-right: 15px;
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
-    color: #e5e7eb;
-    text-decoration: none;
+  font-size: 26px;
+  margin-right: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #e5e7eb;
+  text-decoration: none;
 }
 
 .social-links a:hover {
-    transform: translateY(-5px);
-    color: #38bdf8;
+  transform: translateY(-5px);
+  color: #38bdf8;
 }
 
 .footer-divider {
-    border-color: rgba(255,255,255,0.1);
-    margin: 40px 0 20px;
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 40px 0 20px;
 }
 
 .footer-bottom {
-    font-size: 0.85rem;
-    color: #9ca3af;
+  font-size: 0.85rem;
+  color: #9ca3af;
 }
 
 /* TRUST SECTION */
@@ -239,10 +241,8 @@
 .trust-section .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.65)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65));
   z-index: 2;
 }
 
@@ -275,3 +275,11 @@
   }
 }
 
+#showMoreBtn {
+  transition: all 0.3s ease;
+}
+
+#showMoreBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
+}
