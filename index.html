@@ -269,6 +269,34 @@
         </div>
     </section>
     <!-- Testimonial-->
+    <!-- Floating WhatsApp -->
+    <div id="waButton" class="wa-floating">
+        <i class="bi bi-whatsapp"></i>
+    </div>
+
+    <!-- WhatsApp Popup -->
+    <div id="waPopup" class="wa-popup">
+        <div class="wa-header">
+            <div>
+                <strong>Klapo Travel</strong><br>
+                <small>Typically replies instantly</small>
+            </div>
+
+            <button id="closePopup" class="btn-close"></button>
+        </div>
+
+        <div class="wa-body">
+            <p class="mb-2">
+                👋 Hello! How can we help you?
+            </p>
+
+            <textarea id="waMessage" class="form-control" rows="4" placeholder="Write your message..."></textarea>
+
+            <button id="sendWhatsapp" class="btn btn-success w-100 mt-3">
+                Send to WhatsApp
+            </button>
+        </div>
+    </div>
     <!-- TRUST SECTION -->
     <section class="trust-section mt-5">
         <!-- Background Video -->
@@ -373,6 +401,53 @@
                 btn.innerHTML = "Show More Documentation";
             });
         });
+    </script>
+    <script>
+
+        const waButton = document.getElementById("waButton");
+        const waPopup = document.getElementById("waPopup");
+        const closePopup = document.getElementById("closePopup");
+        const sendWhatsapp = document.getElementById("sendWhatsapp");
+
+        /* Munculkan tombol saat scroll */
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 300) {
+                waButton.classList.add("show");
+            } else {
+                waButton.classList.remove("show");
+            }
+
+        });
+
+        /* Buka popup */
+        waButton.addEventListener("click", () => {
+            waPopup.classList.toggle("show");
+        });
+
+        /* Tutup popup */
+        closePopup.addEventListener("click", () => {
+            waPopup.classList.remove("show");
+        });
+
+        /* Kirim ke WhatsApp */
+        sendWhatsapp.addEventListener("click", () => {
+
+            let pesan = document.getElementById("waMessage").value;
+
+            if (pesan.trim() === "") {
+                pesan = "Hello, I would like to book a travel service.";
+            }
+
+            const nomor = "6282236838125";
+
+            window.open(
+                `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`,
+                "_blank"
+            );
+
+        });
+
     </script>
 </body>
 

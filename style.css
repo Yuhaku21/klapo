@@ -283,3 +283,104 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
 }
+
+/* Floating WA */
+.wa-floating {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  border-radius: 50%;
+  color: white;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  z-index: 9999;
+
+  box-shadow: 0 10px 25px rgba(37, 211, 102, .4);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(50px);
+  transition: .4s;
+}
+
+/* muncul saat scroll */
+.wa-floating.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.wa-floating:hover {
+  transform: scale(1.1);
+}
+
+/* Popup */
+.wa-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+
+  width: 350px;
+
+  background: white;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(30px);
+
+  transition: .3s;
+}
+
+.wa-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.wa-header {
+  background: #25D366;
+  color: white;
+
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wa-body {
+  padding: 20px;
+}
+
+/* Mobile */
+@media(max-width:576px) {
+
+  .wa-popup {
+    width: calc(100% - 30px);
+    right: 15px;
+    left: 15px;
+  }
+
+  .wa-floating {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+}
